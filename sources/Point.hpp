@@ -1,7 +1,10 @@
 #pragma once
+#include <string>
 
-namespace ariel{}
-// using namespace std;
+namespace ariel
+{
+}
+using namespace std;
 class Point
 {
 private:
@@ -15,8 +18,9 @@ public:
     double gitX();
     double gitY();
 
-
+    // help functions
+    string toString();
     double distance(const Point &other) const;
     void print();
-    Point moveTowards(Point location, Point newLocation, double dist);
+    static Point moveTowards(Point source, Point destination, double dist);
 };

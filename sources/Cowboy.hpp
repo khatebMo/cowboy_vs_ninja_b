@@ -7,8 +7,11 @@ class Cowboy:public Character{
     public:
     Cowboy(string name,const Point &lacation);
     ~Cowboy();
-    void shoot(const Character* other);
+    void shoot( Character* other);
     bool hasboolets();
     void reload();
     string print();
+    void attack(Character *other);
+    string getType(){return "Cowboy";}
+    
 };
