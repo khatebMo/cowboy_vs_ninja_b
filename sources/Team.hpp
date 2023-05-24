@@ -18,14 +18,18 @@ private:
 
 public:
     Team(Character *leader);
+    
     virtual ~Team();
     void add(Character *hero);
     void attack(Team *other);
     int stillAlive();
     void print();
     void chooseNewLeader();
-    Character* chooseEnemyToAttack(Team *enemy);
+    virtual Character* chooseEnemyToAttack(Team *enemy);
     void sortTeam();
     void setGroup(vector<Character*>);
+    Character* getLeader(){return leader;}
     vector<Character*> getGroup();
+    int countNinja();
+    int countCowBoys();
 };   

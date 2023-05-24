@@ -66,3 +66,7 @@ void Ninja::attack(Character *other)
         slash(other);
     }
 }
+void Ninja::retreat(){
+    this->setLocation (Point(getLocation().gitX()-1,getLocation().gitY()-1));
+}
+

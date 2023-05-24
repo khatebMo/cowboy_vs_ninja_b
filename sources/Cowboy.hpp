@@ -1,17 +1,36 @@
 #pragma once
-#include"Character.hpp"
-namespace ariel{}
-class Cowboy:public Character{
-    private:
+#include "Character.hpp"
+namespace ariel
+{
+}
+class Cowboy : public Character
+{
+private:
     int bollets;
-    public:
-    Cowboy(string name,const Point &lacation);
+
+public:
+    Cowboy();
+
+    // Copy constructor
+    Cowboy(const Cowboy &other);
+
+    // Copy assignment operator
+    Cowboy &operator=(const Cowboy &other);
+
+    // Move constructor
+    Cowboy(Cowboy &&other) noexcept;
+
+    // Move assignment operator
+    Cowboy &operator=(Cowboy &&other) noexcept;
+
+    Cowboy(string name, const Point &lacation);
     ~Cowboy();
-    void shoot( Character* other);
+    void shoot(Character *other);
     bool hasboolets();
     void reload();
-    string print();
-    void attack(Character *other);
-    string getType(){return "Cowboy";}
+    string print()override;
+    void attack(Character *other)override;
+    string getType() override{ return "Cowboy"; }
+    int getDamage() override{return 10;}
     
 };

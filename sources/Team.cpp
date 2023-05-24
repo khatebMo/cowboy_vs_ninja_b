@@ -157,3 +157,30 @@ vector<Character *> Team::getGroup()
 {
     return this->group;
 }
+int Team::countNinja()
+{
+    int numOfNinja = 0;
+
+    for (Character *character : getGroup())
+    {
+        if (dynamic_cast<Ninja *>(character))
+        {
+            numOfNinja++;
+        }
+    }
+    return numOfNinja;
+}
+int Team::countCowBoys()
+{
+    int numOfCowBoys=0;
+
+    for (Character *character : getGroup())
+    {
+        if (dynamic_cast<Cowboy *>(character))
+        {
+            numOfCowBoys++;
+        }
+    }
+    return numOfCowBoys;
+}
+

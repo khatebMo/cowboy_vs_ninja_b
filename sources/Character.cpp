@@ -4,7 +4,15 @@
 namespace ariel
 {
 }
-Character::Character(string name, const Point &location) : name(name), location(location)
+Character::Character ()
+{
+    hp = 0;
+    Point temp(0,0);
+    setLocation(temp);
+    inTeam  = false;
+    name = "";
+}
+Character::Character(const string& name ,const Point &location) : name(name), location(location)
 {
     this->inTeam=false;
 }

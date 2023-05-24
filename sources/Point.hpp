@@ -8,15 +8,18 @@ using namespace std;
 class Point
 {
 private:
-    double x;
-    double y;
+    double Pointx;
+    double Pointy;
 
 public:
     // const
-    Point(double x, double y);
+    Point();
+    Point(double pointx, double pointy);
     //~Point();
     double gitX();
     double gitY();
+    void setX(double pointx){this->Pointx=pointx;}
+    void setY(double pointy){this->Pointy=pointy;}
 
     // help functions
     string toString();

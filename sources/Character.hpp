@@ -13,9 +13,22 @@ private:
     bool inTeam;
 
 public:
+        // Default constructor
+     Character() ;
 
-    Character(string name,const Point &location);
-    Character(string name,const Point &location,int hp):name(name),location(location),hp(hp){}
+    // Copy constructor
+    Character(const Character& other) = default;
+
+    // Copy assignment operator
+    Character& operator=(const Character& other)= default;
+
+    // Move constructor
+    Character(Character&& other) = default;
+
+    // Move assignment operator
+    Character& operator=(Character&& other) noexcept = default;
+    Character(const string& name,const Point &location);
+    Character(const string& name,const Point &location,int hitp):name(name),location(location),hp(hitp),inTeam(false){}
     virtual ~Character();
     bool isAlive();
     double distance( Character *other) const;
@@ -30,4 +43,5 @@ public:
     void joinTeam();
     virtual void attack(Character *other)=0;
     virtual string getType()=0;
+    virtual int getDamage()=0;
 };
