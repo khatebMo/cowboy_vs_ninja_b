@@ -49,7 +49,7 @@ void Team::attack(Team *other)
     }
     if (!stillAlive())
     {
-        throw runtime_error("team is died22");
+        throw runtime_error("team is died");
     }
     if (!this->leader->isAlive())
     {

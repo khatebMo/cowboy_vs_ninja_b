@@ -20,8 +20,5 @@ public:
     void attack(Character *other) override;
     string getType() override { return "Ninja"; }
     void retreat();
-    int getDamage() override
-    {
-        return 40;
-    }
+    
 };

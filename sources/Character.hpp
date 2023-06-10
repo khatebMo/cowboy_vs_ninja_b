@@ -43,5 +43,4 @@ public:
     void joinTeam();
     virtual void attack(Character *other)=0;
     virtual string getType()=0;
-    virtual int getDamage()=0;
 };

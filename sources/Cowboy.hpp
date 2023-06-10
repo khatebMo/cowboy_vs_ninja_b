@@ -31,6 +31,6 @@ public:
     string print()override;
     void attack(Character *other)override;
     string getType() override{ return "Cowboy"; }
-    int getDamage() override{return 10;}
+    
     
 };
